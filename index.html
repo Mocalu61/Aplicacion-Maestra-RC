@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Mando - Simulador Registro Calificado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <i data-lucide="shield-check"></i>
+                <span>SimuRC 2026</span>
+            </div>
+            <nav>
+                <a href="#" class="nav-item active" data-view="dashboard">
+                    <i data-lucide="layout-dashboard"></i> Dashboard
+                </a>
+                <div class="nav-label">Trámites de Programa</div>
+                <a href="#" class="nav-item" data-view="new-program">
+                    <i data-lucide="plus-circle"></i> Programa Nuevo
+                </a>
+                <a href="#" class="nav-item" data-view="renewal">
+                    <i data-lucide="refresh-cw"></i> Renovación
+                </a>
+                <a href="#" class="nav-item" data-view="single-registry">
+                    <i data-lucide="layers"></i> Registro Único
+                </a>
+                <a href="#" class="nav-item" data-view="virtual">
+                    <i data-lucide="laptop"></i> Programas Virtuales
+                </a>
+                <a href="#" class="nav-item" data-view="modification">
+                    <i data-lucide="edit-3"></i> Modificación de Programa
+                </a>
+                <div class="nav-label">Institucional</div>
+                <a href="#" class="nav-item" data-view="siac-architect">
+                    <i data-lucide="layout"></i> Arquitecto SIAC
+                </a>
+                <a href="#" class="nav-item" data-view="institutional">
+                    <i data-lucide="building-2"></i> Cond. Institucionales
+                </a>
+                <div class="nav-label">Herramientas</div>
+                <button class="tool-btn" onclick="openTool('rap')">RAP Designer</button>
+                <button class="tool-btn" onclick="openTool('credit')">Calculador Créditos</button>
+                <button class="tool-btn" onclick="openTool('saces')"
+                    style="border-color: var(--warning); color: var(--warning);">SACES Trainer</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="topbar">
+                <h1 id="view-title">Dashboard de Calidad</h1>
+                <div class="user-profile">
+                    <span id="institution-name">Universidad Demo</span>
+                    <i data-lucide="user"></i>
+                </div>
+            </header>
+
+            <!-- Main Content View -->
+            <section id="main-view" class="view-container">
+                <!-- Pedagogical content injected here -->
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals for Tools -->
+    <div id="tool-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="tool-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
